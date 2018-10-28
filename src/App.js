@@ -2,6 +2,7 @@ import React from 'react'
 // import * as BooksAPI from './BooksAPI'
 import { Route } from 'react-router-dom'
 import './App.css'
+import MainPage from './components/pages/MainPage'
 
 class BooksApp extends React.Component {
   state = {
@@ -15,6 +16,13 @@ class BooksApp extends React.Component {
   }
 
   render() {
+
+    return(
+      <div>
+        <Route exact path="/" component={ MainPage } />
+      </div>
+    )
+
     return (
       <div className="app">
         {this.state.showSearchPage ? (
